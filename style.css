@@ -1,0 +1,143 @@
+/* ******************* */
+/*        RESET        */
+/* ******************* */
+
+/* box sizing */
+*,
+*::before,
+*:active {
+  box-sizing: border-box;
+}
+
+/* reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* resetting font-weight on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ******************* */
+/*         VARS        */
+/* ******************* */
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --softred: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  /*Neutral  */
+  --darkbrown: hsl(25, 47%, 15%);
+  --mediumbrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --paleorange: hsl(33, 100%, 98%);
+
+  /* font-family */
+  --fontfam: "DM Sans", sans-serif;
+}
+
+/* ******************* */
+/*       CONTENT       */
+/* ******************* */
+
+body {
+  background-color: var(--cream);
+  font-family: var(--fontfam);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  width: 500px;
+  height: 550px;
+}
+
+.balance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 500px;
+  height: 100px;
+  background-color: var(--softred);
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.balance-text {
+  grid-column: 1;
+  color: var(--white);
+  font-size: 14px;
+  padding: 22px 0px 0px 20px;
+}
+
+.balance span {
+  grid-column: 1;
+  color: var(--white);
+  font-size: 26px;
+  font-weight: 700;
+  padding: 5px 0px 0px 20px;
+}
+
+.balance img {
+  grid-column: 2;
+  justify-self: end;
+  translate: 0px -50%;
+  padding-right: 20px;
+}
+
+.graph-content {
+  width: 500px;
+  height: 400px;
+  background-color: var(--paleorange);
+  border-radius: 20px;
+}
