@@ -1,0 +1,5 @@
+const dayEl = document.querySelector(".data");
+
+fetch("./data.json")
+  .then((res) => res.json())
+  .then((data) => console.log(data));
