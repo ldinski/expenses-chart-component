@@ -106,7 +106,7 @@ body {
 .balance {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 550px;
+  width: 600px;
   height: 100px;
   background-color: hsl(var(--softred));
   margin-bottom: 20px;
@@ -138,7 +138,7 @@ body {
 .graph-content {
   display: flex;
   flex-direction: column;
-  width: 550px;
+  width: 600px;
   height: 500px;
   background-color: hsl(var(--paleorange));
   border-radius: 20px;
@@ -156,6 +156,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     ". . . . . . ."
+    ". . . . . . ."
     "mon tue wed thu fri sat sun";
   align-content: end;
   width: 500px;
@@ -163,6 +164,7 @@ body {
 }
 
 .graph p {
+  grid-row: 3;
   display: flex;
   margin: 0px 20px 20px 30px;
   justify-content: space-around;
@@ -173,7 +175,7 @@ body {
 
 .column {
   align-self: flex-end;
-  grid-row: 1;
+  grid-row: 2;
   width: 50px;
   height: 60px;
   background-color: hsl(var(--softred));
@@ -203,6 +205,25 @@ body {
 
 .column:nth-child(7) {
   height: 90px;
+}
+
+.column-value {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  grid-row: 1;
+  height: 40px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: hsl(var(--darkbrown));
+  color: hsl(var(--cream));
+  opacity: 0;
+}
+
+.column-value-opacity {
+  opacity: 1;
 }
 
 .total {
